@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nissim01-dev.github.io/cozycupcorner/sitemap.xml
