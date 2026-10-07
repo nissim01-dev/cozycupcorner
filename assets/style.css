@@ -93,3 +93,5 @@ table.compare th{background:var(--cream)}
 }
 @media (min-width:980px){ .grid{grid-template-columns:1fr 1fr 1fr} }
 @media (prefers-reduced-motion:reduce){ .card{transition:none} }
+
+.pc{display:grid;gap:10px;grid-template-columns:1fr;margin:10px 0}.pc>div{border-radius:10px;padding:8px 12px;font-size:.93rem}.pc ul{margin:.3em 0;padding-left:1.2em}.pc .pros{background:#eef2e6}.pc .cons{background:#f8ece6}@media (min-width:640px){.pc{grid-template-columns:1fr 1fr}}
