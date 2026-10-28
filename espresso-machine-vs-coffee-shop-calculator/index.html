@@ -111,8 +111,8 @@ function update(){
   var mo=r.breakEvenMonths;
   $("r-be").textContent=mo<1?"< 1":(mo<10?(Math.round(mo*10)/10).toString():Math.round(mo).toString());
   var msg="You save "+money(r.perDrink)+" on every drink you make at home instead of buying it. ";
-  if(mo<=6) msg+="At this pace the machine pays for itself in about "+Math.ceil(mo)+" month"+(Math.ceil(mo)===1?"":"s")+". That is a quick payback.";
-  else if(mo<=24) msg+="It pays for itself in about "+(mo<=12?Math.ceil(mo)+" months":(Math.round(mo/12*10)/10)+" years")+", and everything after that is savings.";
+  if(mo<=6) msg+="At this pace the machine pays for itself in "+(mo<1?"less than a month":"about "+Math.max(1,Math.round(mo))+" month"+(Math.max(1,Math.round(mo))===1?"":"s"))+". That is a quick payback.";
+  else if(mo<=24) msg+="It pays for itself in about "+(mo<=12?Math.round(mo)+" months":(Math.round(mo/12*10)/10)+" years")+", and everything after that is savings.";
   else msg+="It takes about "+(Math.round(mo/12*10)/10)+" years to break even. A simpler machine, or making more of your drinks at home, would shorten that.";
   if(r.fiveYear<0) msg+=" Over 5 years you would still be behind, so this one is more about enjoying it than saving.";
   t.textContent=msg;
@@ -165,7 +165,7 @@ update();
 <h3>Philips 3200 Series with LatteGo</h3>
 <div class="tags"><span class="tag">Super-automatic</span></div>
 <p class="who"><strong>Who it's for:</strong> A milk-drink household that hates cleaning frothers.</p>
-<p class="why"><strong>Why it helps:</strong> Five one-touch drinks and the LatteGo milk system, which has no tubes and rinses quickly. Ceramic grinder and an AquaClean water filter are built in. Stock was low when we checked, so look at the listing for availability.</p>
+<p class="why"><strong>Why it helps:</strong> Five one-touch drinks and the LatteGo milk system, which has no tubes and rinses quickly. Ceramic grinder and an AquaClean water filter are built in.</p>
 <a class="btn" href="https://www.amazon.com/dp/B07VFY4MXM/?tag=cozycupcorner-20" rel="sponsored nofollow noopener" target="_blank">Check today's price on Amazon →</a> <span class="afflabel">(affiliate link)</span>
 </div>
 <h3 class="grouph">Pod (capsule) machines</h3>
