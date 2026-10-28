@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coffee to Water Ratio Calculator (Drip, French Press, Cold Brew)</title>
+<meta name="description" content="Coffee to water ratio calculator: grams, tablespoons and water for drip, pour-over, French press, cold brew, AeroPress and espresso. How much for 12 cups?">
+<link rel="canonical" href="https://nissim01-dev.github.io/cozycupcorner/coffee-to-water-ratio-calculator/">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://nissim01-dev.github.io/cozycupcorner/sitemap.xml">
+<meta property="og:site_name" content="Cozy Cup Corner">
+<meta property="og:title" content="Coffee to Water Ratio Calculator (Drip, French Press, Cold Brew)">
+<meta property="og:description" content="Coffee to water ratio calculator: grams, tablespoons and water for drip, pour-over, French press, cold brew, AeroPress and espresso. How much for 12 cups?">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nissim01-dev.github.io/cozycupcorner/coffee-to-water-ratio-calculator/">
+<meta property="og:image" content="https://nissim01-dev.github.io/cozycupcorner/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b5542f">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.calc{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin:18px 0}
+.calc fieldset{border:0;padding:0;margin:0 0 14px}
+.calc legend,.calc label.lab{font-weight:700;font-size:.95rem;display:block;margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:600 .92rem var(--sans);border:1px solid var(--line);background:var(--cream);color:var(--ink);border-radius:99px;padding:8px 14px;cursor:pointer;min-height:40px}
+.chips button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.calc input[type=number],.calc select{font:16px var(--sans);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);min-height:44px}
+.calc input[type=number]{width:8.5em}
+.calc input[type=range]{width:100%;accent-color:var(--accent)}
+.rangelabels{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted)}
+.result{background:var(--cream);border-radius:12px;padding:14px;margin-top:6px}
+.big{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.big div{background:var(--paper);border-radius:10px;padding:10px;text-align:center}
+.big b{display:block;font:700 1.7rem/1.1 var(--serif);color:var(--accent-dark)}
+.big span{font-size:.82rem;color:var(--muted)}
+.ratio-line{text-align:center;font-weight:700;margin:10px 0 4px}
+.steps{margin:.4em 0 0;padding-left:1.3em}
+.hint{font-size:.85rem;color:var(--muted);margin:.3em 0 0}
+.grp{margin-bottom:12px}.grp .lab small{font-weight:400;color:var(--muted)}
+.afflabel{font-size:.8rem;color:var(--muted)}
+.warn{color:#8f3f20;font-weight:600}
+.calc details button{font:600 .9rem var(--sans);background:var(--accent);color:#fff;border:0;border-radius:8px;padding:8px 12px;cursor:pointer}
+@media (min-width:640px){.big{grid-template-columns:repeat(4,1fr)}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Coffee to Water Ratio Calculator", "url": "https://nissim01-dev.github.io/cozycupcorner/coffee-to-water-ratio-calculator/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "isAccessibleForFree": true, "description": "Coffee to water ratio calculator: grams, tablespoons and water for drip, pour-over, French press, cold brew, AeroPress and espresso. How much for 12 cups?", "publisher": {"@type": "Organization", "name": "Cozy Cup Corner"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much coffee do I use for 12 cups?", "acceptedAnswer": {"@type": "Answer", "text": "A 12-cup drip coffee maker counts 5 oz (about 148 ml) cups, so 12 cups is roughly 1,775 ml of water. At a 1:16 ratio that is about 111 grams of ground coffee, or around 21 level tablespoons. Use a little less for a milder pot."}}, {"@type": "Question", "name": "What is the best coffee to water ratio for French press?", "acceptedAnswer": {"@type": "Answer", "text": "Most brew guides land between 1:12 and 1:16 for French press, and 1:15 is a good starting point. For a 34 oz press filled to about 1,000 ml, that is about 67 grams of coarse coffee. Steep 4 minutes, then press slowly."}}, {"@type": "Question", "name": "How many tablespoons of coffee per cup?", "acceptedAnswer": {"@type": "Answer", "text": "A level tablespoon holds about 5 grams of ground coffee. For one 8 oz mug (240 ml) at 1:16 you need about 15 grams, which is roughly 3 level tablespoons. A kitchen scale is more accurate because grind size changes how much fits in a spoon."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap wide">
+<a class="logo" href="../index.html"><span class="cup" aria-hidden="true">☕</span><span>Cozy Cup Corner<small>Cozy home café ideas & coffee gifts</small></span></a>
+<nav class="nav" aria-label="Main"><a href="../index.html">Home</a><a href="../index.html#guides">Gift Guides</a><a href="../index.html#calculators">Calculators</a><a href="../about/index.html">About</a><a href="../contact/index.html">Contact</a></nav>
+</div></header>
+<div class="disclosure-bar">As an Amazon Associate I earn from qualifying purchases. <a href="../privacy/index.html#affiliate">Learn more</a></div>
+<main id="main">
+<article class="wrap">
+<header class="post-header">
+<span class="tag">Free Calculator</span>
+<h1>Coffee to Water Ratio Calculator</h1>
+<p class="meta">By the Cozy Cup Corner team · Updated October 28, 2026</p>
+<p class="disclosure"><strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. The calculator is free and works on its own. Product links below go to Amazon.com; we may earn a commission at no extra cost to you. We don't list prices because they change constantly, so tap through to check today's price on Amazon. Product notes summarize what owners and reviewers commonly report, not our own testing.</p>
+</header>
+<p>Weak one day, bitter the next? Usually the ratio is the problem, not the beans. Pick how you brew, tell us how much you want, and the calculator gives you the coffee in grams and level tablespoons plus the water in ml and ounces.</p>
+<p>The starting ratios come from common brewing guidance (about 1:16 for drip and pour-over, 1:15 for French press and AeroPress, 1:8 for cold brew concentrate and 1:2 for espresso). Slide toward "stronger" or "milder" to match your taste. Everything runs in your browser.</p>
+<div class="calc" id="ratio-calc">
+<fieldset><legend>1. How are you brewing?</legend><div class="chips" id="methods" role="group" aria-label="Brew method"></div></fieldset>
+<div class="grp"><label class="lab" for="amt" id="amt-label">2. How much?</label>
+<div class="row"><input type="number" id="amt" inputmode="decimal" min="0" step="any" value="12" aria-describedby="unit-hint"><select id="unit" aria-label="Unit"></select></div>
+<p class="hint" id="unit-hint"></p></div>
+<div class="grp"><label class="lab" for="strength">3. Strength: <span id="strength-name">Balanced</span></label>
+<input type="range" id="strength" min="-2" max="2" step="1" value="0"><div class="rangelabels"><span>Milder</span><span>Balanced</span><span>Stronger</span></div></div>
+<div class="result" aria-live="polite">
+<div class="big"><div><b id="r-g">–</b><span>grams of coffee</span></div><div><b id="r-tbsp">–</b><span>level tablespoons</span></div><div><b id="r-ml">–</b><span id="r-ml-l">ml water</span></div><div><b id="r-oz">–</b><span id="r-oz-l">fl oz water</span></div></div>
+<p class="ratio-line" id="r-ratio"></p><p class="hint" id="r-note"></p>
+<strong id="steps-h">How to brew it</strong><ol class="steps" id="steps"></ol></div>
+<noscript><p class="warn">This calculator needs JavaScript. Quick rule: about 1 gram of coffee for every 16 ml of water for drip.</p></noscript>
+</div>
+<p class="hint">Tablespoons are approximate (about 5 grams of ground coffee per level tablespoon). Grind size and roast change how much fits in a spoon, so a scale is more consistent.</p>
+<script>
+(function(){
+"use strict";
+var TBSP_G=5.3, OZ_ML=29.5735;
+var M={
+ drip:{label:"Drip",ratio:16,units:["cups5","mug","ml"],def:["cups5",12],note:"A coffee-maker \"cup\" is 5 oz (about 148 ml), so a 12-cup pot is about 1,775 ml.",
+  steps:["Put a paper filter in the basket and add the medium-ground coffee.","Pour cold, fresh water into the reservoir up to the amount above.","Brew, then give the pot a quick stir before pouring so every mug tastes the same."]},
+ pourover:{label:"Pour-over",ratio:16,units:["mug","ml","cups5"],def:["mug",1],note:"Water amount is what you pour. The grounds hold back a little, so the cup ends up slightly smaller.",
+  steps:["Rinse the paper filter with hot water, discard that water, then add medium-fine coffee.","Pour about twice the coffee's weight in water just off the boil, wait 30 to 45 seconds while it blooms.","Pour the rest in slow circles in two or three stages; aim to finish dripping around 3 minutes."]},
+ frenchpress:{label:"French press",ratio:15,units:["ml","mug","cups5"],def:["ml",1000],note:"A 34 oz press holds about 1,000 ml of water once the coffee is in.",
+  steps:["Add coarse coffee to the warmed press and pour in all the hot water.","Stir gently, put the lid on with the plunger up, and steep for 4 minutes.","Press slowly and pour right away so it doesn't keep brewing and turn bitter."]},
+ coldbrew:{label:"Cold brew",ratio:8,units:["ml","mug","cups5"],def:["ml",1000],note:"This makes concentrate. Mix it about 1:1 with water or milk over ice, so you get roughly twice as many drinks.",
+  steps:["Stir extra-coarse coffee into cold or room-temperature water until it is all wet.","Cover and steep 12 to 18 hours in the fridge or on the counter.","Strain through the filter, keep the concentrate in the fridge, and dilute about 1:1 to serve."]},
+ aeropress:{label:"AeroPress",ratio:15,units:["ml","mug"],def:["ml",225],note:"An AeroPress brews up to about 250 ml at a time, so split bigger amounts into batches.",
+  steps:["Put a rinsed paper filter in the cap and add fine-to-medium coffee to the chamber.","Pour in the hot water, stir for about 10 seconds and put the plunger on to hold the brew.","After about 2 minutes total, press down gently for 20 to 30 seconds until you hear a hiss."]},
+ espresso:{label:"Espresso",ratio:2,units:["shots"],def:["shots",1],note:"Numbers are per double shot: about 18 g of coffee in. The \"water\" figure is the espresso you collect in the cup (1 g is about 1 ml).",
+  steps:["Grind very fine, dose about 18 g into the basket, level it and tamp firmly and evenly.","Lock in the portafilter and start the shot right away, with a scale under the cup.","Stop at the target weight; around 25 to 30 seconds is a good sign the grind is right."]}
+};
+var UNITS={cups5:{label:"coffee-maker cups (5 oz)",ml:147.87},mug:{label:"mugs (8 oz / 240 ml)",ml:240},ml:{label:"ml of water",ml:1},shots:{label:"double shots",ml:0}};
+var STRENGTH={"-2":["Much milder",1.12],"-1":["Milder",1.06],"0":["Balanced",1],"1":["Stronger",0.94],"2":["Much stronger",0.88]};
+var ESP_STRENGTH={"-2":["Lungo (longer)",3],"-1":["Longer",2.5],"0":["Classic",2],"1":["Shorter",1.75],"2":["Ristretto",1.5]};
+function calc(method, amount, unit, strength){
+  var m=M[method]; if(!m) return null;
+  amount=Number(amount); if(!(amount>0)) return {error:"Enter an amount above zero."};
+  var s=String(Math.max(-2,Math.min(2,Math.round(Number(strength)||0))));
+  if(method==="espresso"){
+    var r=ESP_STRENGTH[s][1], g=18*amount, out=g*r;
+    return {coffee_g:g, tbsp:g/TBSP_G, water_ml:out, water_oz:out/OZ_ML, ratio:r, strengthName:ESP_STRENGTH[s][0], espresso:true};
+  }
+  var ml=amount*UNITS[unit].ml, ratio=m.ratio*STRENGTH[s][1], g2=ml/ratio;
+  return {coffee_g:g2, tbsp:g2/TBSP_G, water_ml:ml, water_oz:ml/OZ_ML, ratio:ratio, strengthName:STRENGTH[s][0], espresso:false};
+}
+function fmt(n,d){ return n.toLocaleString("en-US",{maximumFractionDigits:d,minimumFractionDigits:0}); }
+function fmtRatio(r){ return "1:"+(Math.round(r*10)/10); }
+if(typeof window!=="undefined") window.CCCRatio={calc:calc,M:M,UNITS:UNITS};
+if(typeof module!=="undefined") module.exports={calc:calc,M:M,UNITS:UNITS,fmtRatio:fmtRatio};
+if(typeof document==="undefined") return;
+var $=function(id){return document.getElementById(id);};
+var cur="drip", chips=$("methods");
+Object.keys(M).forEach(function(k){
+  var b=document.createElement("button"); b.type="button"; b.textContent=M[k].label; b.dataset.m=k;
+  b.setAttribute("aria-pressed",k===cur?"true":"false");
+  b.addEventListener("click",function(){ setMethod(k,true); }); chips.appendChild(b);
+});
+function setMethod(k,resetAmt){
+  cur=k; var m=M[k];
+  Array.prototype.forEach.call(chips.children,function(b){ b.setAttribute("aria-pressed",b.dataset.m===k?"true":"false"); });
+  var sel=$("unit"); sel.innerHTML="";
+  m.units.forEach(function(u){ var o=document.createElement("option"); o.value=u; o.textContent=UNITS[u].label; sel.appendChild(o); });
+  if(resetAmt){ sel.value=m.def[0]; $("amt").value=m.def[1]; }
+  $("unit-hint").textContent=m.note;
+  $("r-ml-l").textContent=k==="espresso"?"ml espresso in the cup":"ml water";
+  $("r-oz-l").textContent=k==="espresso"?"fl oz espresso":"fl oz water";
+  update();
+}
+function update(){
+  var r=calc(cur,$("amt").value,$("unit").value,$("strength").value);
+  var steps=$("steps"); steps.innerHTML="";
+  M[cur].steps.forEach(function(t){ var li=document.createElement("li"); li.textContent=t; steps.appendChild(li); });
+  $("steps-h").textContent="How to brew it: "+M[cur].label;
+  if(!r||r.error){ ["r-g","r-tbsp","r-ml","r-oz"].forEach(function(i){$(i).textContent="–";}); $("r-ratio").textContent=r?r.error:""; return; }
+  $("strength-name").textContent=r.strengthName;
+  $("r-g").textContent=fmt(r.coffee_g, r.coffee_g<20?1:0);
+  $("r-tbsp").textContent=fmt(r.tbsp, r.tbsp<10?1:0);
+  $("r-ml").textContent=fmt(r.water_ml,0);
+  $("r-oz").textContent=fmt(r.water_oz,1);
+  $("r-ratio").textContent="Ratio "+fmtRatio(r.ratio)+" coffee to "+(r.espresso?"espresso out":"water");
+  var note="";
+  if(cur==="aeropress"&&r.water_ml>250) note="That is more than one AeroPress holds; brew it in "+Math.ceil(r.water_ml/250)+" batches.";
+  if(cur==="espresso") note="Tablespoons are only a rough guide for espresso; weigh it if you can.";
+  $("r-note").textContent=note;
+}
+["amt","unit","strength"].forEach(function(i){ $(i).addEventListener("input",update); $(i).addEventListener("change",update); });
+var q=(location.hash||"").replace("#","");
+setMethod(M[q]?q:"drip",true);
+})();
+
+</script>
+<h2 id="ratio-chart">Coffee to water ratio chart</h2>
+<div class="table-scroll"><table class="compare"><tr><th>Method</th><th>Starting ratio</th><th>Grind</th><th>Example</th></tr>
+<tr><td>Drip coffee maker</td><td>1:16</td><td>Medium</td><td>12 cups (about 1,775 ml): about 111 g</td></tr>
+<tr><td>Pour-over</td><td>1:16</td><td>Medium-fine</td><td>One 12 oz mug (355 ml): about 22 g</td></tr>
+<tr><td>French press</td><td>1:15</td><td>Coarse</td><td>34 oz press (1,000 ml): about 67 g</td></tr>
+<tr><td>Cold brew concentrate</td><td>1:8</td><td>Extra coarse</td><td>1 liter of water: 125 g</td></tr>
+<tr><td>AeroPress</td><td>1:15</td><td>Fine to medium</td><td>225 ml: 15 g</td></tr>
+<tr><td>Espresso</td><td>1:2</td><td>Very fine</td><td>Double shot: 18 g in, about 36 g out</td></tr></table></div>
+<h2 id="why-ratio">Why the ratio matters more than the scoop</h2>
+<p>Coffee tastes right when the water pulls out just enough flavor from the grounds. Too little coffee for the water and the cup tastes thin and sour; too much and it tastes heavy and bitter. A ratio such as 1:16 just means 1 gram of coffee for every 16 grams (or ml) of water, so it scales from one mug to a full carafe.</p>
+<p>Scoops and "cups" vary a lot. A coffee maker's "cup" is usually 5 oz, a mug is often 8 to 12 oz, and a heaped scoop can hold almost twice a level one. Weighing once with a kitchen scale and remembering the number is the easiest upgrade most home brewers can make.</p>
+<h2 id="tools">Tools that make this easier</h2>
+<p>None of these are required, but each one makes the numbers above easier to repeat every morning.</p>
+<div class="product" id="p-greater-goods-coffee-scale">
+<span class="num">1</span><span class="icon" aria-hidden="true">⚖️</span>
+<h3>Greater Goods Coffee Scale with Timer</h3>
+<div class="tags"><span class="tag">Kitchen scale</span></div>
+<p class="who"><strong>Who it's for:</strong> Anyone who wants the calculator's grams to land in the cup every time.</p>
+<p class="why"><strong>Why it helps:</strong> It weighs to 0.1 g and has a built-in timer, so you can weigh the beans, tare, then time the pour or the bloom without a second gadget. Owners like the backlit display and the silicone cover that protects it from drips.</p>
+<a class="btn" href="https://www.amazon.com/dp/B09B4CB7C1/?tag=cozycupcorner-20" rel="sponsored nofollow noopener" target="_blank">Check today's price on Amazon →</a> <span class="afflabel">(affiliate link)</span>
+</div>
+<div class="product" id="p-baratza-encore">
+<span class="num">2</span><span class="icon" aria-hidden="true">🫘</span>
+<h3>Baratza Encore Conical Burr Grinder</h3>
+<div class="tags"><span class="tag">Burr grinder</span></div>
+<p class="who"><strong>Who it's for:</strong> Drip, pour-over and French press drinkers ready to grind fresh.</p>
+<p class="why"><strong>Why it helps:</strong> A long-running favorite among home brewers, with 40 grind settings from fine to coarse. Burrs give a more even grind than a blade grinder, which helps the ratio taste the same from one day to the next.</p>
+<a class="btn" href="https://www.amazon.com/dp/B007F183LK/?tag=cozycupcorner-20" rel="sponsored nofollow noopener" target="_blank">Check today's price on Amazon →</a> <span class="afflabel">(affiliate link)</span>
+</div>
+<div class="product" id="p-chefman-gooseneck-kettle">
+<span class="num">3</span><span class="icon" aria-hidden="true">🫖</span>
+<h3>Chefman Gooseneck Electric Kettle (0.8 L)</h3>
+<div class="tags"><span class="tag">Gooseneck kettle</span></div>
+<p class="who"><strong>Who it's for:</strong> Pour-over and AeroPress fans who want a slow, steady pour.</p>
+<p class="why"><strong>Why it helps:</strong> The thin gooseneck spout makes it easy to pour the water in stages, which is what the pour-over steps above ask for. It has one-touch boil, auto shut-off and boil-dry protection.</p>
+<a class="btn" href="https://www.amazon.com/dp/B0D4617CLP/?tag=cozycupcorner-20" rel="sponsored nofollow noopener" target="_blank">Check today's price on Amazon →</a> <span class="afflabel">(affiliate link)</span>
+</div>
+<div class="product" id="p-cafe-du-chateau-french-press">
+<span class="num">4</span><span class="icon" aria-hidden="true">☕</span>
+<h3>Cafe Du Chateau French Press (34 oz)</h3>
+<div class="tags"><span class="tag">French press</span></div>
+<p class="who"><strong>Who it's for:</strong> Anyone who wants a full-bodied pot for two to four mugs.</p>
+<p class="why"><strong>Why it helps:</strong> A glass and stainless steel press with a multi-layer filter. At 34 oz it fits the classic 1:15 recipe of about 67 g of coarse coffee to 1,000 ml of water. One of the most-reviewed French presses on Amazon.</p>
+<a class="btn" href="https://www.amazon.com/dp/B01J4O0T4E/?tag=cozycupcorner-20" rel="sponsored nofollow noopener" target="_blank">Check today's price on Amazon →</a> <span class="afflabel">(affiliate link)</span>
+</div>
+<div class="product" id="p-county-line-cold-brew">
+<span class="num">5</span><span class="icon" aria-hidden="true">🧊</span>
+<h3>County Line Kitchen Cold Brew Maker (64 oz)</h3>
+<div class="tags"><span class="tag">Cold brew maker</span></div>
+<p class="who"><strong>Who it's for:</strong> Iced coffee drinkers who want a batch in the fridge all week.</p>
+<p class="why"><strong>Why it helps:</strong> A wide-mouth glass jar with a fine mesh filter and a leak-proof lid. Fill the filter with coarse coffee, add water at about 1:8, steep overnight and pull the filter out. Owners rate it highly for how easy it is to clean.</p>
+<a class="btn" href="https://www.amazon.com/dp/B0CSV7HFYF/?tag=cozycupcorner-20" rel="sponsored nofollow noopener" target="_blank">Check today's price on Amazon →</a> <span class="afflabel">(affiliate link)</span>
+</div>
+<div class="product" id="p-aeropress-original">
+<span class="num">6</span><span class="icon" aria-hidden="true">🧪</span>
+<h3>AeroPress Original Coffee Press</h3>
+<div class="tags"><span class="tag">AeroPress</span></div>
+<p class="who"><strong>Who it's for:</strong> Single-cup brewers, travelers and anyone short on counter space.</p>
+<p class="why"><strong>Why it helps:</strong> Makes one smooth, concentrated mug in about two minutes and cleans up with a single push. It is light and nearly unbreakable, so it travels well, and the recipe range (about 1:14 to 1:16) is forgiving.</p>
+<a class="btn" href="https://www.amazon.com/dp/B0047BIWSK/?tag=cozycupcorner-20" rel="sponsored nofollow noopener" target="_blank">Check today's price on Amazon →</a> <span class="afflabel">(affiliate link)</span>
+</div>
+<div class="callout"><strong>Thinking about espresso at home?</strong> Use our <a href="../espresso-machine-vs-coffee-shop-calculator/index.html">home espresso vs coffee shop calculator</a> to see how long a machine takes to pay for itself.</div>
+<section class="faq"><h2 id="faq">FAQ</h2><h3>How much coffee do I use for 12 cups?</h3><p>A 12-cup drip coffee maker counts 5 oz (about 148 ml) cups, so 12 cups is roughly 1,775 ml of water. At a 1:16 ratio that is about 111 grams of ground coffee, or around 21 level tablespoons. Use a little less for a milder pot.</p><h3>What is the best coffee to water ratio for French press?</h3><p>Most brew guides land between 1:12 and 1:16 for French press, and 1:15 is a good starting point. For a 34 oz press filled to about 1,000 ml, that is about 67 grams of coarse coffee. Steep 4 minutes, then press slowly.</p><h3>How many tablespoons of coffee per cup?</h3><p>A level tablespoon holds about 5 grams of ground coffee. For one 8 oz mug (240 ml) at 1:16 you need about 15 grams, which is roughly 3 level tablespoons. A kitchen scale is more accurate because grind size changes how much fits in a spoon.</p></section>
+<aside class="related"><strong>Keep browsing:</strong><ul><li><a href="../best-coffee-grinders-worth-the-money/index.html">8 Best Coffee Grinders Worth the Money</a></li><li><a href="../espresso-machine-vs-coffee-shop-calculator/index.html">Is an Espresso Machine Worth It? Savings Calculator</a></li><li><a href="../gifts-for-work-from-home-coffee-lovers/index.html">11 Gifts for Work-From-Home Coffee Lovers</a></li><li><a href="../affordable-gifts-for-coffee-lovers/index.html">25 Best Gifts for Coffee Lovers on a Budget</a></li></ul></aside>
+</article>
+</main>
+<footer class="site-footer"><div class="wrap wide">
+<p><strong>Cozy Cup Corner</strong> — Cozy home café ideas & coffee gifts.</p>
+<p><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Cozy Cup Corner is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. Product availability and pricing change often; please check the current details on Amazon before you buy.</p>
+<div class="fnav"><a href="../index.html">Home</a><a href="../coffee-to-water-ratio-calculator/index.html">Coffee ratio calculator</a><a href="../espresso-machine-vs-coffee-shop-calculator/index.html">Espresso savings calculator</a><a href="../about/index.html">About</a><a href="../privacy/index.html">Privacy &amp; Affiliate Disclosure</a><a href="../contact/index.html">Contact</a><a href="../sitemap.xml">Sitemap</a><a href="https://nissim01-dev.github.io/biggiftlist/">Big Christmas gifts: The Big Gift List</a></div>
+<p>© 2026 Cozy Cup Corner. Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</p>
+</div></footer>
+</body>
+</html>

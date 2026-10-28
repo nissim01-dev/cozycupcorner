@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is an Espresso Machine Worth It? Home vs Coffee Shop Calculator</title>
+<meta name="description" content="Free calculator: compare coffee shop drinks with home espresso. Enter your own costs to see months to break even, yearly savings and 5-year savings.">
+<link rel="canonical" href="https://nissim01-dev.github.io/cozycupcorner/espresso-machine-vs-coffee-shop-calculator/">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://nissim01-dev.github.io/cozycupcorner/sitemap.xml">
+<meta property="og:site_name" content="Cozy Cup Corner">
+<meta property="og:title" content="Is an Espresso Machine Worth It? Home vs Coffee Shop Calculator">
+<meta property="og:description" content="Free calculator: compare coffee shop drinks with home espresso. Enter your own costs to see months to break even, yearly savings and 5-year savings.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nissim01-dev.github.io/cozycupcorner/espresso-machine-vs-coffee-shop-calculator/">
+<meta property="og:image" content="https://nissim01-dev.github.io/cozycupcorner/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b5542f">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.calc{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin:18px 0}
+.calc fieldset{border:0;padding:0;margin:0 0 14px}
+.calc legend,.calc label.lab{font-weight:700;font-size:.95rem;display:block;margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:600 .92rem var(--sans);border:1px solid var(--line);background:var(--cream);color:var(--ink);border-radius:99px;padding:8px 14px;cursor:pointer;min-height:40px}
+.chips button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.calc input[type=number],.calc select{font:16px var(--sans);padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);min-height:44px}
+.calc input[type=number]{width:8.5em}
+.calc input[type=range]{width:100%;accent-color:var(--accent)}
+.rangelabels{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted)}
+.result{background:var(--cream);border-radius:12px;padding:14px;margin-top:6px}
+.big{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.big div{background:var(--paper);border-radius:10px;padding:10px;text-align:center}
+.big b{display:block;font:700 1.7rem/1.1 var(--serif);color:var(--accent-dark)}
+.big span{font-size:.82rem;color:var(--muted)}
+.ratio-line{text-align:center;font-weight:700;margin:10px 0 4px}
+.steps{margin:.4em 0 0;padding-left:1.3em}
+.hint{font-size:.85rem;color:var(--muted);margin:.3em 0 0}
+.grp{margin-bottom:12px}.grp .lab small{font-weight:400;color:var(--muted)}
+.afflabel{font-size:.8rem;color:var(--muted)}
+.warn{color:#8f3f20;font-weight:600}
+.calc details button{font:600 .9rem var(--sans);background:var(--accent);color:#fff;border:0;border-radius:8px;padding:8px 12px;cursor:pointer}
+@media (min-width:640px){.big{grid-template-columns:repeat(4,1fr)}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Is an Espresso Machine Worth It? Home vs Coffee Shop Calculator", "url": "https://nissim01-dev.github.io/cozycupcorner/espresso-machine-vs-coffee-shop-calculator/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "isAccessibleForFree": true, "description": "Free calculator: compare coffee shop drinks with home espresso. Enter your own costs to see months to break even, yearly savings and 5-year savings.", "publisher": {"@type": "Organization", "name": "Cozy Cup Corner"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is an espresso machine worth it?", "acceptedAnswer": {"@type": "Answer", "text": "It usually is if you buy café drinks several times a week and would actually make them at home. Enter how many café drinks you buy, what you pay, what the machine would cost you and your home cost per drink. If the break-even is under a year or two, the machine tends to pay for itself."}}, {"@type": "Question", "name": "How long does it take an espresso machine to pay for itself?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the machine cost by what you save each month. Monthly savings are your café drinks per week, times the difference between the café price and your home cost per drink, times about 4.33 weeks. Heavy café drinkers often break even within months; occasional drinkers can take years."}}, {"@type": "Question", "name": "How do I work out my home cost per drink?", "acceptedAnswer": {"@type": "Answer", "text": "Divide what you paid for a bag of beans by the number of shots it makes. A double shot uses about 18 grams, so a 12 oz (340 g) bag makes about 18 doubles. Add the milk, syrup or pods you use, and you have your home cost per drink."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap wide">
+<a class="logo" href="../index.html"><span class="cup" aria-hidden="true">☕</span><span>Cozy Cup Corner<small>Cozy home café ideas & coffee gifts</small></span></a>
+<nav class="nav" aria-label="Main"><a href="../index.html">Home</a><a href="../index.html#guides">Gift Guides</a><a href="../index.html#calculators">Calculators</a><a href="../about/index.html">About</a><a href="../contact/index.html">Contact</a></nav>
+</div></header>
+<div class="disclosure-bar">As an Amazon Associate I earn from qualifying purchases. <a href="../privacy/index.html#affiliate">Learn more</a></div>
+<main id="main">
+<article class="wrap">
+<header class="post-header">
+<span class="tag">Free Calculator</span>
+<h1>Is an Espresso Machine Worth It? Home vs Coffee Shop Calculator</h1>
+<p class="meta">By the Cozy Cup Corner team · Updated October 28, 2026</p>
+<p class="disclosure"><strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. The calculator is free and works on its own. Product links below go to Amazon.com; we may earn a commission at no extra cost to you. We don't list prices because they change constantly, so tap through to check today's price on Amazon. Product notes summarize what owners and reviewers commonly report, not our own testing.</p>
+</header>
+<p>A daily latte habit adds up quietly. This calculator compares what you spend at the café with what the same drink costs you at home, then shows how many months a machine needs to pay for itself.</p>
+<p>Use your own numbers: your usual café order, the machine you're considering (check today's price on Amazon or wherever you'd buy it) and your cost per drink at home. Nothing is prefilled with prices, and nothing you type leaves your browser.</p>
+<div class="calc" id="save-calc">
+<div class="grp"><label class="lab" for="cur">Currency symbol</label><select id="cur"><option value="$">$</option><option value="€">€</option><option value="£">£</option><option value="S/ ">S/</option><option value="">none</option></select></div>
+<div class="grp"><label class="lab" for="dpw">Café drinks per week</label><input type="number" id="dpw" inputmode="decimal" min="0" step="any" placeholder="e.g. 5"></div>
+<div class="grp"><label class="lab" for="cafe">What you pay per café drink <small>(with tip, if you tip)</small></label><input type="number" id="cafe" inputmode="decimal" min="0" step="any" placeholder="your usual"></div>
+<div class="grp"><label class="lab" for="mach">What the machine would cost you <small>(plus grinder or accessories, if needed)</small></label><input type="number" id="mach" inputmode="decimal" min="0" step="any" placeholder="machine total"></div>
+<div class="grp"><label class="lab" for="home">Your home cost per drink <small>(beans, milk, pods)</small></label><input type="number" id="home" inputmode="decimal" min="0" step="any" placeholder="per drink">
+<details class="hint"><summary>Help me estimate it</summary>
+<div class="row" style="margin-top:8px"><label>Bag of beans cost <input type="number" id="bag" inputmode="decimal" min="0" step="any" placeholder="bag"></label><label>Bag size (grams) <input type="number" id="bagg" inputmode="decimal" min="0" step="any" value="340"></label><label>Coffee per drink (grams) <input type="number" id="dose" inputmode="decimal" min="0" step="any" value="18"></label><label>Milk or extras per drink <input type="number" id="extra" inputmode="decimal" min="0" step="any" placeholder="0"></label></div>
+<p>Estimated home cost per drink: <strong id="est">–</strong> <button type="button" id="use-est">Use this</button></p></details></div>
+<div class="result" aria-live="polite">
+<div class="big"><div><b id="r-be">–</b><span>months to break even</span></div><div><b id="r-mo">–</b><span>saved per month</span></div><div><b id="r-yr">–</b><span>saved per year</span></div><div><b id="r-5y">–</b><span>net saved in 5 years</span></div></div>
+<p class="hint" id="r-text">Fill in the four boxes to see your numbers.</p></div>
+<noscript><p class="warn">This calculator needs JavaScript. The math: machine cost ÷ (drinks per week × (café price − home cost) × 4.33) = months to break even.</p></noscript>
+</div>
+<script>
+(function(){
+"use strict";
+function calc(drinksPerWeek, cafePrice, machineCost, homeCost){
+  var d=Number(drinksPerWeek), c=Number(cafePrice), m=Number(machineCost), h=Number(homeCost);
+  if([drinksPerWeek,cafePrice,machineCost,homeCost].some(function(v){return v===""||v===null||v===undefined;})) return {incomplete:true};
+  if([d,c,m,h].some(function(v){return !isFinite(v)||v<0;})) return {error:"Use zero or positive numbers only."};
+  var perDrink=c-h, perWeek=d*perDrink, perYear=perWeek*52, perMonth=perYear/12;
+  var res={perDrink:perDrink, perMonth:perMonth, perYear:perYear, fiveYear:perYear*5-m};
+  res.breakEvenMonths = perMonth>0 ? m/perMonth : Infinity;
+  return res;
+}
+function homeCostEstimate(bagCost, bagGrams, doseGrams, extras){
+  var b=Number(bagCost), g=Number(bagGrams), d=Number(doseGrams), x=Number(extras)||0;
+  if(!(b>=0)||!(g>0)||!(d>0)||bagCost==="") return null;
+  return b/(g/d)+x;
+}
+if(typeof module!=="undefined") module.exports={calc:calc,homeCostEstimate:homeCostEstimate};
+if(typeof document==="undefined") return;
+var $=function(id){return document.getElementById(id);};
+function money(n){ var s=$("cur").value, neg=n<0; n=Math.abs(n);
+  return (neg?"−":"")+s+n.toLocaleString("en-US",{minimumFractionDigits:n<100?2:0,maximumFractionDigits:n<100?2:0}); }
+function update(){
+  var r=calc($("dpw").value,$("cafe").value,$("mach").value,$("home").value), t=$("r-text");
+  var ids=["r-be","r-mo","r-yr","r-5y"];
+  if(r.incomplete||r.error){ ids.forEach(function(i){$(i).textContent="–";}); t.textContent=r.error||"Fill in the four boxes to see your numbers."; return; }
+  $("r-mo").textContent=money(r.perMonth); $("r-yr").textContent=money(r.perYear); $("r-5y").textContent=money(r.fiveYear);
+  if(!isFinite(r.breakEvenMonths)){
+    $("r-be").textContent="Never";
+    t.textContent=r.perDrink<=0?"Your home drink costs the same as or more than the café one, so the machine never pays for itself on cost alone. Check the home cost: beans usually cost far less per drink than pods.":"Add how many café drinks you buy per week to see a break-even.";
+    return;
+  }
+  var mo=r.breakEvenMonths;
+  $("r-be").textContent=mo<1?"< 1":(mo<10?(Math.round(mo*10)/10).toString():Math.round(mo).toString());
+  var msg="You save "+money(r.perDrink)+" on every drink you make at home instead of buying it. ";
+  if(mo<=6) msg+="At this pace the machine pays for itself in about "+Math.ceil(mo)+" month"+(Math.ceil(mo)===1?"":"s")+". That is a quick payback.";
+  else if(mo<=24) msg+="It pays for itself in about "+(mo<=12?Math.ceil(mo)+" months":(Math.round(mo/12*10)/10)+" years")+", and everything after that is savings.";
+  else msg+="It takes about "+(Math.round(mo/12*10)/10)+" years to break even. A simpler machine, or making more of your drinks at home, would shorten that.";
+  if(r.fiveYear<0) msg+=" Over 5 years you would still be behind, so this one is more about enjoying it than saving.";
+  t.textContent=msg;
+}
+function est(){ var v=homeCostEstimate($("bag").value,$("bagg").value,$("dose").value,$("extra").value); $("est").textContent=v===null?"–":money(v); return v; }
+["dpw","cafe","mach","home","cur"].forEach(function(i){ $(i).addEventListener("input",update); $(i).addEventListener("change",update); });
+["bag","bagg","dose","extra","cur"].forEach(function(i){ $(i).addEventListener("input",est); });
+$("use-est").addEventListener("click",function(){ var v=est(); if(v!==null){ $("home").value=(Math.round(v*100)/100).toString(); update(); } });
+update();
+})();
+
+</script>
+<h2 id="how-it-works">How we do the math</h2>
+<ul><li><strong>Saved per drink</strong> = café price − home cost per drink.</li>
+<li><strong>Saved per month</strong> = drinks per week × saved per drink × 52 ÷ 12 (about 4.33 weeks).</li>
+<li><strong>Months to break even</strong> = machine cost ÷ saved per month.</li>
+<li><strong>Net saved in 5 years</strong> = saved per year × 5 − machine cost.</li></ul>
+<h2 id="what-the-number-misses">What the number doesn't show</h2>
+<p>The calculator assumes you replace every café drink with one made at home. Most people keep a café visit or two for the treat or the company, so try a lower drinks-per-week number to see a more realistic result. It also leaves out descaling supplies, replacement parts and the time it takes to make a drink, but it doesn't count the friends and family you'll end up making lattes for either.</p>
+<p>The type of machine changes the home cost too. A semi-automatic with a grinder needs the most practice but has the lowest cost per drink, because you buy whole beans. A super-automatic grinds and brews at the press of a button. A pod machine is the easiest, but capsules usually cost more per drink than beans, so enter your pod cost as the home cost.</p>
+<h2 id="machines">Espresso machines to consider, by type</h2>
+<h3 class="grouph">Semi-automatic with a built-in grinder</h3>
+<div class="product" id="p-breville-barista-express">
+<span class="num">1</span><span class="icon" aria-hidden="true">☕</span>
+<h3>Breville Barista Express (BES870XL)</h3>
+<div class="tags"><span class="tag">Semi-auto + grinder</span></div>
+<p class="who"><strong>Who it's for:</strong> Someone who wants to learn real espresso and latte art and keep the cost per drink low with whole beans.</p>
+<p class="why"><strong>Why it helps:</strong> Grinder, portafilter and steam wand in one machine, so there is nothing else to buy to get started. One of the most-reviewed espresso machines on Amazon. Expect a week or two of practice to dial in shots.</p>
+<a class="btn" href="https://www.amazon.com/dp/B00CH9QWOU/?tag=cozycupcorner-20" rel="sponsored nofollow noopener" target="_blank">Check today's price on Amazon →</a> <span class="afflabel">(affiliate link)</span>
+</div>
+<div class="product" id="p-ninja-luxe-cafe-premier">
+<span class="num">2</span><span class="icon" aria-hidden="true">🥷</span>
+<h3>Ninja Luxe Café Premier 3-in-1 (ES601)</h3>
+<div class="tags"><span class="tag">All-in-one + grinder</span></div>
+<p class="who"><strong>Who it's for:</strong> A latte drinker who wants guidance instead of a learning curve.</p>
+<p class="why"><strong>Why it helps:</strong> It weighs the dose for you and suggests grind adjustments, makes espresso, drip coffee and cold brew, and has a hands-free frothing system. A good fit if the household drinks more than one style of coffee.</p>
+<a class="btn" href="https://www.amazon.com/dp/B0D45PK5V4/?tag=cozycupcorner-20" rel="sponsored nofollow noopener" target="_blank">Check today's price on Amazon →</a> <span class="afflabel">(affiliate link)</span>
+</div>
+<h3 class="grouph">Super-automatic (bean to cup)</h3>
+<div class="product" id="p-delonghi-magnifica-evo">
+<span class="num">3</span><span class="icon" aria-hidden="true">🔘</span>
+<h3>De&#x27;Longhi Magnifica Evo with LatteCrema</h3>
+<div class="tags"><span class="tag">Super-automatic</span></div>
+<p class="who"><strong>Who it's for:</strong> Someone who wants a café drink at the press of a button, using whole beans.</p>
+<p class="why"><strong>Why it helps:</strong> It grinds, tamps, brews and froths milk automatically, with one-touch drink buttons. You still buy beans rather than pods, so the home cost per drink stays close to a manual machine.</p>
+<a class="btn" href="https://www.amazon.com/dp/B0B38KRTV6/?tag=cozycupcorner-20" rel="sponsored nofollow noopener" target="_blank">Check today's price on Amazon →</a> <span class="afflabel">(affiliate link)</span>
+</div>
+<div class="product" id="p-philips-3200-lattego">
+<span class="num">4</span><span class="icon" aria-hidden="true">🥛</span>
+<h3>Philips 3200 Series with LatteGo</h3>
+<div class="tags"><span class="tag">Super-automatic</span></div>
+<p class="who"><strong>Who it's for:</strong> A milk-drink household that hates cleaning frothers.</p>
+<p class="why"><strong>Why it helps:</strong> Five one-touch drinks and the LatteGo milk system, which has no tubes and rinses quickly. Ceramic grinder and an AquaClean water filter are built in. Stock was low when we checked, so look at the listing for availability.</p>
+<a class="btn" href="https://www.amazon.com/dp/B07VFY4MXM/?tag=cozycupcorner-20" rel="sponsored nofollow noopener" target="_blank">Check today's price on Amazon →</a> <span class="afflabel">(affiliate link)</span>
+</div>
+<h3 class="grouph">Pod (capsule) machines</h3>
+<div class="product" id="p-nespresso-vertuo-pop-plus">
+<span class="num">5</span><span class="icon" aria-hidden="true">💗</span>
+<h3>Nespresso Vertuo Pop+ by De&#x27;Longhi</h3>
+<div class="tags"><span class="tag">Capsule</span></div>
+<p class="who"><strong>Who it's for:</strong> Someone who wants zero learning and zero mess.</p>
+<p class="why"><strong>Why it helps:</strong> Barcoded capsules set the brew for each cup size, from espresso to a full mug, in about a minute. Compact and colorful. Capsules usually cost more per drink than beans, so enter your pod cost as the home cost above.</p>
+<a class="btn" href="https://www.amazon.com/dp/B0F2P1SSB2/?tag=cozycupcorner-20" rel="sponsored nofollow noopener" target="_blank">Check today's price on Amazon →</a> <span class="afflabel">(affiliate link)</span>
+</div>
+<div class="product" id="p-nespresso-vertuo-lattissima">
+<span class="num">6</span><span class="icon" aria-hidden="true">🍮</span>
+<h3>Nespresso Vertuo Lattissima by De&#x27;Longhi</h3>
+<div class="tags"><span class="tag">Capsule + one-touch milk</span></div>
+<p class="who"><strong>Who it's for:</strong> A latte or cappuccino fan who wants pod simplicity with milk built in.</p>
+<p class="why"><strong>Why it helps:</strong> A Vertuo machine with an attached milk carafe, so lattes and cappuccinos are one button. A simple way to replace a daily milk-drink café habit.</p>
+<a class="btn" href="https://www.amazon.com/dp/B0C5KP15DK/?tag=cozycupcorner-20" rel="sponsored nofollow noopener" target="_blank">Check today's price on Amazon →</a> <span class="afflabel">(affiliate link)</span>
+</div>
+<div class="callout"><strong>Dialing in your shots?</strong> Our <a href="../coffee-to-water-ratio-calculator/index.html">coffee to water ratio calculator</a> includes espresso (1:2) and every other brew method. For more machines, see <a href="../best-espresso-machines-for-beginners/index.html">best espresso machines for beginners</a>.</div>
+<section class="faq"><h2 id="faq">FAQ</h2><h3>Is an espresso machine worth it?</h3><p>It usually is if you buy café drinks several times a week and would actually make them at home. Enter how many café drinks you buy, what you pay, what the machine would cost you and your home cost per drink. If the break-even is under a year or two, the machine tends to pay for itself.</p><h3>How long does it take an espresso machine to pay for itself?</h3><p>Divide the machine cost by what you save each month. Monthly savings are your café drinks per week, times the difference between the café price and your home cost per drink, times about 4.33 weeks. Heavy café drinkers often break even within months; occasional drinkers can take years.</p><h3>How do I work out my home cost per drink?</h3><p>Divide what you paid for a bag of beans by the number of shots it makes. A double shot uses about 18 grams, so a 12 oz (340 g) bag makes about 18 doubles. Add the milk, syrup or pods you use, and you have your home cost per drink.</p></section>
+<aside class="related"><strong>Keep browsing:</strong><ul><li><a href="../best-espresso-machines-for-beginners/index.html">9 Best Espresso Machines for Beginners</a></li><li><a href="../best-espresso-machines-with-grinder/index.html">9 Best Espresso Machines with a Built-In Grinder</a></li><li><a href="../budget-espresso-accessories/index.html">10 Affordable Espresso Accessories</a></li><li><a href="../coffee-to-water-ratio-calculator/index.html">Coffee to Water Ratio Calculator</a></li></ul></aside>
+</article>
+</main>
+<footer class="site-footer"><div class="wrap wide">
+<p><strong>Cozy Cup Corner</strong> — Cozy home café ideas & coffee gifts.</p>
+<p><strong>Affiliate disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Cozy Cup Corner is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. Product availability and pricing change often; please check the current details on Amazon before you buy.</p>
+<div class="fnav"><a href="../index.html">Home</a><a href="../coffee-to-water-ratio-calculator/index.html">Coffee ratio calculator</a><a href="../espresso-machine-vs-coffee-shop-calculator/index.html">Espresso savings calculator</a><a href="../about/index.html">About</a><a href="../privacy/index.html">Privacy &amp; Affiliate Disclosure</a><a href="../contact/index.html">Contact</a><a href="../sitemap.xml">Sitemap</a><a href="https://nissim01-dev.github.io/biggiftlist/">Big Christmas gifts: The Big Gift List</a></div>
+<p>© 2026 Cozy Cup Corner. Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</p>
+</div></footer>
+</body>
+</html>
